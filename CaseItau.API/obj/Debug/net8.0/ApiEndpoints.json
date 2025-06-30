@@ -1,0 +1,93 @@
+[
+  {
+    "ContainingType": "CaseItau.API.Controllers.FundoController",
+    "Method": "Get",
+    "RelativePath": "api/Fundo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaseItau.API.Controllers.FundoController",
+    "Method": "Post",
+    "RelativePath": "api/Fundo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametroViewModel",
+        "Type": "CaseItau.API.ViewModels.ParametroFundoViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaseItau.API.Controllers.FundoController",
+    "Method": "Put",
+    "RelativePath": "api/Fundo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametroViewModel",
+        "Type": "CaseItau.API.ViewModels.ParametroFundoViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaseItau.API.Controllers.FundoController",
+    "Method": "Get",
+    "RelativePath": "api/Fundo/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "Get"
+  },
+  {
+    "ContainingType": "CaseItau.API.Controllers.FundoController",
+    "Method": "Delete",
+    "RelativePath": "api/Fundo/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaseItau.API.Controllers.FundoController",
+    "Method": "MovimentarPatrimonio",
+    "RelativePath": "patrimonio",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parametroViewModel",
+        "Type": "CaseItau.API.ViewModels.ParametroPatrimonioFundoViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
