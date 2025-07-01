@@ -88,6 +88,7 @@ namespace CaseItau.Test.Domain.Services
         {
             // Arrange
             fundoRepository.GetFundo(Arg.Is<ParametroIdFundoDTO>(x => x.Codigo == fundoFull.Codigo)).Returns(fundo);
+            fundoRepository.GetFundo(Arg.Is<ParametroFundoExistDTO>(x => x.Codigo == fundoFull.Codigo && x.Cnpj == fundoFull.Cnpj)).Returns(null as Fundo);
 
             // Act
             var result = await fundoService.PutFundo(fundoFull);
@@ -97,7 +98,28 @@ namespace CaseItau.Test.Domain.Services
 
             await fundoRepository.Received(1).PutFundo(fundoFull);
         }
-    
+
+        [Theory]
+        [AutoNSubstituteData]
+        public async Task PutFundo_ShouldCallRepositoryAndReturnnull_ReturnFail([Frozen] IFundoRepository fundoRepository,
+                                                                               [Greedy] FundoService fundoService,
+                                                                               ParametroFundoDTO fundoFull,
+                                                                               Fundo fundo)
+        {
+            // Arrange
+            fundoRepository.GetFundo(Arg.Is<ParametroIdFundoDTO>(x => x.Codigo == fundoFull.Codigo)).Returns(fundo);
+            fundoRepository.GetFundo(Arg.Is<ParametroFundoExistDTO>(x => x.Codigo == fundoFull.Codigo && x.Cnpj == fundoFull.Cnpj)).Returns(fundo);
+
+            // Act
+            var result = await fundoService.PutFundo(fundoFull);
+
+            // Assert
+            result.Should().BeEquivalentTo(new Fundo());
+
+            await fundoRepository.DidNotReceive().PutFundo(fundoFull);
+        }
+
+
         [Theory]
         [AutoNSubstituteData]
         public async Task PutPatrimonioFundo_ShouldCallRepositoryAndReturnFundo_ReturnOk([Frozen] IFundoRepository fundoRepository,
@@ -127,6 +149,7 @@ namespace CaseItau.Test.Domain.Services
         {
             // Arrange
             fundoRepository.GetFundo(Arg.Is<ParametroIdFundoDTO>(x => x.Codigo == fundoFull.Codigo)).Returns(fundo);
+            fundoRepository.GetFundo(Arg.Is<ParametroFundoExistDTO>(x => x.Codigo == fundoFull.Codigo && x.Cnpj == fundoFull.Cnpj)).Returns(null as Fundo);
 
             // Act
             var result = await fundoService.PostFundo(fundoFull);
@@ -135,6 +158,26 @@ namespace CaseItau.Test.Domain.Services
             result.Should().BeEquivalentTo(fundo);
 
             await fundoRepository.Received(1).PostFundo(fundoFull);
+        }
+
+        [Theory]
+        [AutoNSubstituteData]
+        public async Task PostFundo_ShouldCallRepositoryAndReturnNull_ReturnFail([Frozen] IFundoRepository fundoRepository,
+                                                                                  [Greedy] FundoService fundoService,
+                                                                                  ParametroFundoDTO fundoFull,
+                                                                                  Fundo fundo)
+        {
+            // Arrange
+            fundoRepository.GetFundo(Arg.Is<ParametroIdFundoDTO>(x => x.Codigo == fundoFull.Codigo)).Returns(fundo);
+            fundoRepository.GetFundo(Arg.Is<ParametroFundoExistDTO>(x => x.Codigo == fundoFull.Codigo && x.Cnpj == fundoFull.Cnpj)).Returns(fundo);
+
+            // Act
+            var result = await fundoService.PostFundo(fundoFull);
+
+            // Assert
+            result.Should().BeEquivalentTo(new Fundo());
+
+            await fundoRepository.DidNotReceive().PostFundo(fundoFull);
         }
 
         [Theory]

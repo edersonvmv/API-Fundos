@@ -8,6 +8,7 @@ C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net8.0\CaseItau.Infra.AssemblyInfoInputs.cache
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net8.0\CaseItau.Infra.AssemblyInfo.cs
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net8.0\CaseItau.Infra.csproj.CoreCompileInputs.cache
+C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net8.0\CaseItau.Infra.sourcelink.json
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net8.0\CaseItau.CB77DE07.Up2Date
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net8.0\CaseItau.Infra.dll
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.Infra\obj\Debug\net8.0\refint\CaseItau.Infra.dll

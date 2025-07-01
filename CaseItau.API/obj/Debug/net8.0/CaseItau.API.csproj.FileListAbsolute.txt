@@ -86,6 +86,7 @@ C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.0\CaseItau.API.csproj.CoreCompileInputs.cache
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.0\CaseItau.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.0\CaseItau.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.0\CaseItau.API.sourcelink.json
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\eders\source\repos\case_itau_net_core-main\CaseItau.API\obj\Debug\net8.0\staticwebassets\msbuild.CaseItau.API.Microsoft.AspNetCore.StaticWebAssets.props
