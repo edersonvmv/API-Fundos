@@ -1,5 +1,5 @@
 # Case de engenharia Itau - .Net
-##API .NET Core para gestão de fundos de investimento.
+API .NET Core para gestão de fundos de investimento.
 
 ## Tecnologias
 
@@ -68,7 +68,7 @@ Essas informações estão configuradas no arquivo `appsettings.json`.
 **Exemplo de token:**
 
 	 Secret: 9a5e95c2-5c13-4fbe-9a09-9733f8c88cf5e294848bd8e5b74e42928dc0b9230
-
+   
 	 Payload:   
    	 {
  	     "iss": "CaseItau",
@@ -80,10 +80,3 @@ Essas informações estão configuradas no arquivo `appsettings.json`.
 ![image](https://github.com/user-attachments/assets/26673de3-0543-4f02-976f-86fc1d86eece)
 ![image](https://github.com/user-attachments/assets/b3411208-6f4d-45c7-ae41-0bffb3372866)
 ![image](https://github.com/user-attachments/assets/3089730c-458c-4f97-aaa9-5a8efe1ac152)
-
-
- 	
-
-
-
-

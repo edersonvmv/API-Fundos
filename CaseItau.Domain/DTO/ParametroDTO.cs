@@ -25,4 +25,10 @@ namespace CaseItau.Domain.DTO
         public int CodigoTipo { get; set; }        
         public decimal? Patrimonio { get; set; }
     }
+
+    public class ParametroFundoExistDTO
+    {
+        public string Codigo { get; set; }
+        public string Cnpj { get; set; }
+    }
 }

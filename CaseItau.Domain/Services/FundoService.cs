@@ -2,6 +2,7 @@
 using CaseItau.Domain.Interfaces;
 using CaseItau.Domain.Models;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace CaseItau.Domain.Services
 {
@@ -37,7 +38,7 @@ namespace CaseItau.Domain.Services
                 return fundo;
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Notificar("fundo não encontrado");
                 _logger.LogInformation("GetFundo - Erro: {Message}", ex.Message);
@@ -48,6 +49,8 @@ namespace CaseItau.Domain.Services
 
         public async Task<Fundo> PostFundo(ParametroFundoDTO parametro)
         {
+            if (await ExistFundoOrCnpj(parametro)) return new Fundo();
+
             await _fundoRepository.PostFundo(parametro);
 
             return await GetFundo(new ParametroIdFundoDTO { Codigo = parametro.Codigo });
@@ -55,6 +58,8 @@ namespace CaseItau.Domain.Services
 
         public async Task<Fundo> PutFundo(ParametroFundoDTO parametro)
         {
+            if (await ExistFundoOrCnpj(parametro)) return new Fundo();
+
             await _fundoRepository.PutFundo(parametro);
 
             return await GetFundo(new ParametroIdFundoDTO { Codigo = parametro.Codigo });
@@ -70,6 +75,26 @@ namespace CaseItau.Domain.Services
         public async Task<bool> DeleteFundo(ParametroIdFundoDTO parametro)
         {
             return await _fundoRepository.DeleteFundo(parametro);
+        }
+
+        private async Task<bool> ExistFundoOrCnpj(ParametroFundoDTO parametro)
+        {
+            var fundo = await _fundoRepository.GetFundo(new ParametroFundoExistDTO
+            {
+                Codigo = parametro.Codigo,
+                Cnpj = parametro.Cnpj
+            });
+
+            if (fundo != null)
+            {
+                Notificar("Código do fundo ou CNPJ já existe");
+                _logger.LogInformation("Fundo: {Codigo} ou Cnpj: {Cnpj} já existe na base de dados", parametro.Codigo, parametro.Cnpj);
+
+                return true;
+            }
+            else
+                return false;
+
         }
 
         public void Dispose()

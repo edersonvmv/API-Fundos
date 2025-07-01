@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CaseItau.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a15edad416e14952f53f89f22d16de564b094d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("CaseItau.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CaseItau.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,6 +9,10 @@
 
         public const string SelectId = SelectAll + " WHERE F.CODIGO = @CODIGO";
 
+        public const string SelectValid = @"SELECT F.CODIGO, F.CNPJ 
+                                            FROM FUNDO F 
+                                            WHERE F.CODIGO = @CODIGO OR F.CNPJ = @CNPJ";
+
         public const string Insert = @"INSERT INTO FUNDO VALUES(@CODIGO, @NOME, @CNPJ, @CODIGO_TIPO, @PATRIMONIO)";
 
         public const string Update = @"UPDATE FUNDO 
