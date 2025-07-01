@@ -68,7 +68,7 @@ Essas informações estão configuradas no arquivo `appsettings.json`.
 **Exemplo de token:**
 
 	 Secret: 9a5e95c2-5c13-4fbe-9a09-9733f8c88cf5e294848bd8e5b74e42928dc0b9230
-
+   
 	 Payload:   
    	 {
  	     "iss": "CaseItau",
