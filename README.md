@@ -1,5 +1,5 @@
 # Case de engenharia Itau - .Net
-##API .NET Core para gestão de fundos de investimento.
+API .NET Core para gestão de fundos de investimento.
 
 ## Tecnologias
 
