@@ -1,4 +1,39 @@
 # Case de engenharia Itau - .Net
+API .NET Core para gestão de fundos de investimento.
+
+## Tecnologias
+
+- **Linguagem & Framework**
+  - .NET 8
+
+- **Acesso a Dados**
+  - Dapper
+  - SQLite
+
+- **Validações**
+  - FluentValidation
+
+- **Mapeamentos**
+  - AutoMapper
+
+- **Logs**
+  - Serilog
+
+- **Documentação**
+  - Swagger
+
+- **Autenticação**
+  - JWT
+
+- **Testes**
+  - xUnit
+
+## Projeto
+
+- **API** → Controllers, Configs, Validators, ViewModels
+- **Domain** → Services (regar de négocio), DTOs, Interfaces, Models, Notificacoes
+- **Infra** → Repositories (Dapper, SQLite), Queries
+- **Tests** → Domain (Tests), Attributes (NSubstitute)
 
 ## Introdução
 Neste projeto esta sendo utilizada a base de dados sqlite (arquivo dbcaseitau S3db) com as seguintes tabelas:
@@ -16,22 +51,32 @@ Neste projeto esta sendo utilizada a base de dados sqlite (arquivo dbcaseitau S3
 
 > Obs.: você pode fazer o uso do [sqliteadmin] para gerenciar a base de dados, visualizar as tabelas e seus respectivos dados
 
-No projeto CaseItau.API foi disponibilizada uma API de Fundos com os metodos abaixo realizando acoes diretas na base de dados:
 
-	GET                        - LISTAR TODOS OS FUNDOS CADASTRADOS
-	GET    {CODIGO}            - RETORNAR OS DETALHES DE UM DETERMINADO FUNDO PELO CÓDIGO
-	POST   {FUNDO}             - REALIZA O CADASTRO DE UM NOVO FUNDO
-	PUT    {CODIGO}            - EDITA O CADASTRO DE UM FUNDO JÁ EXISTENTE
-	DELETE {CODIGO}            - EXCLUI O CADASTRO DE UM FUNDO
-	PUT    {CODIGO}/patrimonio - ADICIONA OU SUBTRAI DETERMINADO VALOR DO PATRIMONIO DE UM FUNDO
+## Autenticação JWT
 
-## Ações a serem realizadas
-1. Faça o fork do projeto no seu github. Não realize commits na branch main e nem crie novas branchs.
-2. O código da api de fundos faz mal uso dos objetos, não segue boas práticas e não possui qualidade. Refatore o codigo utilizando as melhores bibliotecas, praticas, patterns e garanta a qualidade da aplicação. Fique a vontade para usar outros componentes e base de dados.
-2. Após a inclusão de um novo fundo via API, os metodos GET da API de Fundos estão retornando erro. Identifique e corrija o erro
-3. Crie uma aplicação web (Angular ou ASP NET MVC) que consuma todos os metodos da API de fundos
+O projeto utiliza autenticação via JWT. Para autenticar, é necessário gerar um token de acesso. Você pode validar seu token [aqui](https://jwt.io).
 
-Se a sua vaga for BACKEND não se preocupe em fazer a parte de FRONT.<br>
-Após finalizar o case, envie o link do seu github com a solução final para o gestor que o solicitou.
+	Para gerar o token, informe os seguintes parâmetros:
 
-[sqliteadmin]: <http://sqliteadmin.orbmu2k.de> 
+		- Secret/Key
+		- Issuer
+		- Audience
+		- Expiration Time
+
+Essas informações estão configuradas no arquivo `appsettings.json`.
+
+**Exemplo de token:**
+
+	 Secret: 9a5e95c2-5c13-4fbe-9a09-9733f8c88cf5e294848bd8e5b74e42928dc0b9230
+
+	 Payload:   
+   	 {
+ 	     "iss": "CaseItau",
+  	     "aud": "CaseItau", 
+  	     "exp": 1754078400
+	 }
+
+
+![image](https://github.com/user-attachments/assets/26673de3-0543-4f02-976f-86fc1d86eece)
+![image](https://github.com/user-attachments/assets/b3411208-6f4d-45c7-ae41-0bffb3372866)
+![image](https://github.com/user-attachments/assets/3089730c-458c-4f97-aaa9-5a8efe1ac152)
