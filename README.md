@@ -52,16 +52,16 @@ Neste projeto esta sendo utilizada a base de dados sqlite (arquivo dbcaseitau S3
 > Obs.: você pode fazer o uso do [sqliteadmin] para gerenciar a base de dados, visualizar as tabelas e seus respectivos dados
 
 
-## 🔑 Autenticação JWT
+## Autenticação JWT
 
 O projeto utiliza autenticação via JWT. Para autenticar, é necessário gerar um token de acesso. Você pode validar seu token [aqui](https://jwt.io).
 
 	Para gerar o token, informe os seguintes parâmetros:
 
-		- **Secret/Key**
-		- **Issuer**
-		- **Audience**
-		- **Expiration Time**
+		- Secret/Key
+		- Issuer
+		- Audience
+		- Expiration Time
 
 Essas informações estão configuradas no arquivo `appsettings.json`.
 
@@ -76,10 +76,10 @@ Essas informações estão configuradas no arquivo `appsettings.json`.
   	     "exp": 1754078400
 	 }
 
-    
-	![image](https://github.com/user-attachments/assets/26673de3-0543-4f02-976f-86fc1d86eece)
-	![image](https://github.com/user-attachments/assets/b3411208-6f4d-45c7-ae41-0bffb3372866)
- 	![image](https://github.com/user-attachments/assets/3089730c-458c-4f97-aaa9-5a8efe1ac152)
+
+![image](https://github.com/user-attachments/assets/26673de3-0543-4f02-976f-86fc1d86eece)
+![image](https://github.com/user-attachments/assets/b3411208-6f4d-45c7-ae41-0bffb3372866)
+![image](https://github.com/user-attachments/assets/3089730c-458c-4f97-aaa9-5a8efe1ac152)
 
 
  	
